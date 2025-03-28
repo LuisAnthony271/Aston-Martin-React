@@ -50,3 +50,42 @@
 .btnLogo:hover{
     transform: var(--transform);
 }
+
+@media(max-width:600px){
+    nav{
+        display: none;
+    }
+
+    #buttonMobile{
+        display: block;
+        background: transparent;
+    }
+
+    #menuIcons {
+        width: 20px;
+        height: 20px;
+    }
+
+    .active nav {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background-color: var(--color-black);
+        z-index: 1;
+    }
+
+    .active .ulMenu {
+        display: flex;
+        padding: 16px 20px;
+        gap: 32px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .active .navLi {
+        text-align: center;
+    }
+}

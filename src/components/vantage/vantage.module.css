@@ -1,0 +1,10 @@
+.vantage {
+    max-width: var(--max-width);
+}
+
+.vantageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}

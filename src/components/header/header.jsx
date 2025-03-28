@@ -5,6 +5,7 @@ import iconCloser from "../../assets/menu-closer.svg";
 import iconBars from "../../assets/menu-togle.svg";
 import Button from "../button/button";
 
+
 const Header = () => {
 
     const [menuActive, setMenuActive] = useState(false);
