@@ -1,0 +1,72 @@
+
+
+.velocity {
+    max-width: var(--max-width);
+    display: flex;
+    margin: 0 auto 55px;
+    align-items: center;
+    
+}
+
+.velocityWrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background: linear-gradient(#91282f, #330002);
+    border-radius: 12px;
+    /* margin: 0 62px; */
+    padding: 36px 60px;
+    
+}
+
+.velocityContent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.btnVelocityWrapper {
+    padding-top: 14px;
+}
+
+.h1Velocity {
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42.8px;
+}
+
+.pVelocity {
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.3px;
+    font-family: "helvetica" sans-serif;
+}
+
+.btnVelocity{
+    padding: 13px 65px;
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
+    background-color: var(--color-black);
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btnVelocity:hover {
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+.carVelocity {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.carVelocity:hover {
+    transform: var(--transform);
+}

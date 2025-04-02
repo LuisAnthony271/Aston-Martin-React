@@ -1,91 +1,78 @@
 .Header {
-    border-bottom: 2px solid #404040;
-    position: fixed;
-    width: 100%;
-    background-color: rgb(0, 0 , 0 / 30%);
-    backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--color-gray);
+  background-color: #000000bb;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
-
-.WrapperHeader {
-    padding: 1.25rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: var(--max-width)
+.wrapperHeader {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1rem;
 }
 
-.menuMobile { 
-    display: none;
+.ulMenu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.ulHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+#buttonMobile {
+  display: none;
 }
 
-.liHeader {
-    list-style: none;
+.logoHeader {
+  transition: var(--transition);
+}
+
+.logoHeader:hover {
+  transform: var(--transform);
 }
 
 .aHeader {
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 100%;
-    transition: var(--transition);
+  transition: var(--transition);
 }
 
 .aHeader:hover {
-    color: #91282f;
+  transition: var(--transition);
+  color: var(--color-darkRed);;
 }
 
-.btnLogo {
-    cursor: pointer;
-    transition: var(--transition);
-}
 
-.btnLogo:hover{
-    transform: var(--transform);
-}
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  #buttonMobile {
+    display: block;
+    background: transparent;
+  }
+  #menuIcons {
+    width: 20px;
+    height: 20px;
+  }
+  .active nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background-color: #000000;
+    z-index: 1;
+  }
+  .active .ulMenu {
+    display: flex;
+    padding: 16px 20px;
+    gap: 32px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 
-@media(max-width:600px){
-    nav{
-        display: none;
-    }
-
-    #buttonMobile{
-        display: block;
-        background: transparent;
-    }
-
-    #menuIcons {
-        width: 20px;
-        height: 20px;
-    }
-
-    .active nav {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        width: 100%;
-        background-color: var(--color-black);
-        z-index: 1;
-    }
-
-    .active .ulMenu {
-        display: flex;
-        padding: 16px 20px;
-        gap: 32px;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .active .navLi {
-        text-align: center;
-    }
+  .active .navLi {
+    text-align: center;
+  }
 }

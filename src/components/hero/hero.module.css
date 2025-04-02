@@ -1,21 +1,17 @@
 .hero {
-    max-width: var(--max-width);
-    display: flex;
-    margin: 0 auto;
-    padding-top: 232px;
-    justify-content: center;
+  padding-top: 9rem;
 }
 
 .heroWrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: center;
 }
 
 .heroContent {
     display: grid;
-    justify-content: center;
     align-items: baseline;
     gap: 24px;
 }
@@ -57,6 +53,7 @@
     line-height: 20px;
     font-weight: 400;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .btnHeroClass:hover {
@@ -64,3 +61,44 @@
     background-color: var(--color-white);
 }
 
+.carHero {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.carHero:hover {
+    transform: var(--transform);
+}
+
+@media(max-width:600px) {
+
+    .hero{
+        padding-top: 3rem;
+    }
+    .heroWrapper {
+        flex-direction: column;
+    }
+
+    .heroContent {
+        align-items: center;
+        gap: 2rem;
+    }
+
+    h2,p {
+        text-align: center;
+    }
+
+    .heroContent {
+        align-items: center;
+    }
+
+    .carHero {
+        margin-top: 4rem;
+    }
+
+    .btnWrapper {
+        display: flex;
+        margin: 0  auto;
+    }
+
+}

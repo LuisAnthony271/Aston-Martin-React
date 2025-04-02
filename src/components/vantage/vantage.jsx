@@ -10,8 +10,13 @@ const Vantage = () => {
                 <div className={styles.imgVantage}>
                     <img src={carVantage} className={styles.carVantage}/>
                 </div>
-                <div className={styles.vantagecontent}>
-                    <p>Vantage é cru e instintivo, inabalável em seu propósito<br/> singular: dominar os sentidos através de seu design de<br/> renome mundial, desempenho ágil e habilidade artesanal dedicada.</p>
+                <div className={styles.vantageContent}>
+                    <p className={styles.pVantage}>
+                        Vantage é cru e instintivo, inabalável em seu propósito<br/>
+                     singular: dominar os sentidos através de seu design de<br/>
+                      renome mundial, desempenho ágil e habilidade artesanal<br/>
+                       dedicada.
+                    </p>
                     <Button className={styles.btnHeroClass}> SAIBA MAIS </Button>
                 </div>
             </div>
@@ -20,4 +25,4 @@ const Vantage = () => {
     )
 }
 
-export default Vantage
+export default Vantage;

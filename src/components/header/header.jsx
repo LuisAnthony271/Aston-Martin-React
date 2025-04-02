@@ -5,39 +5,46 @@ import iconCloser from "../../assets/menu-closer.svg";
 import iconBars from "../../assets/menu-togle.svg";
 import Button from "../button/button";
 
-
 const Header = () => {
+  const [menuActive, setMenuActive] = useState(false);
 
-    const [menuActive, setMenuActive] = useState(false);
-    const toggleMenu = () => {
-        setMenuActive("!menuActive")
-    } 
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
 
-    return (
-        <header className={`${styles.Header} ${menuActive ? styles.active : ""}`}>
-            <div className={styles.WrapperHeader}>
-                <div className={styles.btnLogoHeader}>
-                    <button className={styles.btnLogo}>
-                        <img className={styles.imgLogoHeader} src={LogoHeader} alt="" />
-                    </button>
-                <div className={styles.contentHeader}>
-                    <button onClick={toggleMenu} className={styles.menuMobile} id={styles.menuIcons}>
-                        <img src={ menuActive ? iconCloser : iconBars } alt="" className="" />
-                    </button>
-                </div>
-                </div>
-                <nav className={menuActive ? styles.active : ""}>
-                    <ul className={styles.ulHeader}>
-                        <li className={styles.liHeader}><a href="" className={styles.aHeader}>Inicio</a></li>
-                        <li className={styles.liHeader}><a href="" className={styles.aHeader}>Carros</a></li>
-                        <li className={styles.liHeader}><a href="" className={styles.aHeader}>Manutenção</a></li>
-                        <li className={styles.liHeader}><a href="" className={styles.aHeader}>Novos</a></li>
-                        <li className={styles.btiLi} > <Button>Comprar</Button> </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    )
-}
+  return (
+    <header className={`${styles.Header} ${menuActive ? styles.active : ""}`}>
+      <div className={styles.wrapperHeader}>
+        <div>
+          <button>
+            <a href="#"><img className={styles.logoHeader} src={LogoHeader} alt="" /></a>
+          </button>
+        </div>
+        <button onClick={toggleMenu} id={styles.buttonMobile}>
+          <img src={menuActive ? iconCloser : iconBars} id={styles.menuIcons} alt="" />
+        </button>
+        <nav className={menuActive ? styles.active : ""}>
+          <ul className={styles.ulMenu}>
+            <li className={styles.navLi}>
+              <a className={styles.aHeader} href="">Inicio</a>
+            </li>
+            <li className={styles.navLi}>
+              <a className={styles.aHeader} href="">Carros</a>
+            </li>
+            <li className={styles.navLi}>
+              <a className={styles.aHeader} href="">Manuntenção</a>
+            </li>
+            <li className={styles.navLi}>
+              <a className={styles.aHeader} href="">Novos</a>
+            </li>
+            <li className={styles.liBtn}>
+                <Button>Comprar</Button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+};
 
-export default Header ;
+export default Header;
